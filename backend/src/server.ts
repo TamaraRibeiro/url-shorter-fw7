@@ -4,6 +4,7 @@ import { prisma } from "./lib/prisma";
 import { createUrl } from "./routes/create-url";
 import { serializerCompiler, validatorCompiler } from "fastify-type-provider-zod";
 import { getUrl } from "./routes/get-url";
+import { env } from "./env";
 
 const app = fastify();
 
@@ -17,6 +18,6 @@ app.setSerializerCompiler(serializerCompiler);
 app.register(createUrl);
 app.register(getUrl);
 
-app.listen({ port: 3333 }).then(() => {
-  console.log("Server running! On http://localhost:3333");
+app.listen({ port: env.PORT }).then(() => {
+  console.log("Server running!");
 });

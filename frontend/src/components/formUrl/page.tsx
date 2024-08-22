@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeft, ArrowUpLeft, ArrowUpRight, Copy } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Copy } from "lucide-react";
 import { useState } from "react";
-import { useRouter } from "next/router";
 
 export function FormURL() {
   const [shortUrl, setShortUrl] = useState("");

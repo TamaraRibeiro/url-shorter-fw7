@@ -16,15 +16,7 @@ export async function createUrl(app: FastifyInstance) {
     },
     async (request) => {
       const { url } = request.body;
-      // console.log(request.body)
-      // function generateShortName() {
-      //   const crypto = require("crypto");
-      //   const token = crypto.randomBytes(3).toString("hex");
-        
-      //   const shortURL = "http://short.me/" + token;
-
-      //   return shortURL;
-      // }
+      
       const token = crypto.randomBytes(3).toString("hex");
 
       await prisma.linkURL.create({

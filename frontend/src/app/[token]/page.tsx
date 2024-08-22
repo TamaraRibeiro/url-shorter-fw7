@@ -1,4 +1,5 @@
 "use client";
+import { env } from "@/env";
 import { useEffect } from "react";
 export default async function RedirectUrl({
   params,
@@ -8,7 +9,7 @@ export default async function RedirectUrl({
   useEffect(() => {
     async function getUrl() {
       const response = await fetch(
-        `http://localhost:3333/${params.token}`
+        `${env.API_BASE_URL}/${params.token}`
       ).then((response) => response.json());
       if (response.url) {
         if (typeof window !== "undefined") {

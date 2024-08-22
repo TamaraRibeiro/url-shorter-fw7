@@ -1,7 +1,7 @@
 <h1 align="center">FW7 development challenge</h1>
 
 <p align="center">
-  <img alt="Challenge FW7" src=".github/cover.png" width="100%">
+  <img alt="Challenge FW7" src=".github/cover.png" width="100%" style="border-radius: 10px">
 </p>
 
 ## 🖥️ Project
